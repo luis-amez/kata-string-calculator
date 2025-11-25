@@ -1,7 +1,7 @@
 {
-  "name": "ts-eslint-prettier-jest-minimal",
+  "name": "kata-string-calculator",
   "version": "1.0.0",
-  "description": "TypeScript template with ESLint, Prettier and Jest",
+  "description": "Practice exercise of a function that adds the elements of a string.",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "husky install",
