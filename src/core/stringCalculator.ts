@@ -15,12 +15,16 @@ export function stringCalculator(input: string | null) {
 
 function getSeparator(input: string) {
   if (input.startsWith(START_OF_CONFIGURATION))
-    return input.substring(input.indexOf(START_OF_CONFIGURATION) + 2, input.lastIndexOf(END_OF_CONFIGURATION));
+    return input.substring(
+      input.indexOf(START_OF_CONFIGURATION) + START_OF_CONFIGURATION.length,
+      input.lastIndexOf(END_OF_CONFIGURATION)
+    );
   return DEFAULT_SEPARATOR;
 }
 
 function deleteConfiguration(input: string) {
-  if (input.startsWith(START_OF_CONFIGURATION)) return input.substring(input.lastIndexOf(END_OF_CONFIGURATION) + 1);
+  if (input.startsWith(START_OF_CONFIGURATION))
+    return input.substring(input.lastIndexOf(END_OF_CONFIGURATION) + END_OF_CONFIGURATION.length);
   return input;
 }
 
